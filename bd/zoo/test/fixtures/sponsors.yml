@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bairro: MyString
+  rua: MyString
+  cidade: MyString
+  nome_da_empresa: MyString
+  produto: MyString
+  montante: 9.99
+  telefone: MyString
+
+two:
+  bairro: MyString
+  rua: MyString
+  cidade: MyString
+  nome_da_empresa: MyString
+  produto: MyString
+  montante: 9.99
+  telefone: MyString

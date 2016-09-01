@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2016-01-16
+  observacoes: MyString
+  altura: 9.99
+  comprimento: 9.99
+  peso: 9.99
+  envergadura: 9.99
+  animal_id: 
+  funcionario_id: 
+
+two:
+  data: 2016-01-16
+  observacoes: MyString
+  altura: 9.99
+  comprimento: 9.99
+  peso: 9.99
+  envergadura: 9.99
+  animal_id: 
+  funcionario_id: 

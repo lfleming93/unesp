@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @evaluation.data %>
+</p>
+
+<p>
+  <strong>Observacoes:</strong>
+  <%= @evaluation.observacoes %>
+</p>
+
+<p>
+  <strong>Altura:</strong>
+  <%= @evaluation.altura %>
+</p>
+
+<p>
+  <strong>Comprimento:</strong>
+  <%= @evaluation.comprimento %>
+</p>
+
+<p>
+  <strong>Peso:</strong>
+  <%= @evaluation.peso %>
+</p>
+
+<p>
+  <strong>Envergadura:</strong>
+  <%= @evaluation.envergadura %>
+</p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @evaluation.animal %>
+</p>
+
+<p>
+  <strong>Funcionario:</strong>
+  <%= @evaluation.employee %>
+</p>
+
+<%= link_to 'Edit', edit_evaluation_path(@evaluation) %> |
+<%= link_to 'Back', evaluations_path %>

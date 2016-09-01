@@ -1,0 +1,2 @@
+# loja
+Projeto LCP

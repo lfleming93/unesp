@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @installation.descricao %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @installation.area %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @installation.volume %>
+</p>
+
+<p>
+  <strong>Localizacao:</strong>
+  <%= @installation.localizacao %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @installation.tipo %>
+</p>
+
+<p>
+  <strong>Sponsor:</strong>
+  <%= @installation.sponsor %>
+</p>
+
+<%= link_to 'Edit', edit_installation_path(@installation) %> |
+<%= link_to 'Back', installations_path %>

@@ -1,0 +1,5 @@
+Some background
+Modifications to the von neumann model
+Parallel hardware
+Performance
+Starting with Pthreads (chapter 4)

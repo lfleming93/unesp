@@ -1,0 +1,14 @@
+Computação paralela:
+
+Livro:
+Parallel Programming -> Peter Pacheco
+
+
+
+Função de Speedup no paralelismo:
+
+S = Tserial / Tparallel
+
+
+Modelo usado: Fork-Join
+

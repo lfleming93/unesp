@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @sponsor.bairro %>
+</p>
+
+<p>
+  <strong>Rua:</strong>
+  <%= @sponsor.rua %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @sponsor.cidade %>
+</p>
+
+<p>
+  <strong>Nome da empresa:</strong>
+  <%= @sponsor.nome_da_empresa %>
+</p>
+
+<p>
+  <strong>Produto:</strong>
+  <%= @sponsor.produto %>
+</p>
+
+<p>
+  <strong>Montante:</strong>
+  <%= @sponsor.montante %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @sponsor.telefone %>
+</p>
+
+<%= link_to 'Edit', edit_sponsor_path(@sponsor) %> |
+<%= link_to 'Back', sponsors_path %>

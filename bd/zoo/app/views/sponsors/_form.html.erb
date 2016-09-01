@@ -1,0 +1,45 @@
+<%= form_for(@sponsor) do |f| %>
+  <% if @sponsor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sponsor.errors.count, "error") %> prohibited this sponsor from being saved:</h2>
+
+      <ul>
+      <% @sponsor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bairro %><br>
+    <%= f.text_field :bairro %>
+  </div>
+  <div class="field">
+    <%= f.label :rua %><br>
+    <%= f.text_field :rua %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade %><br>
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_da_empresa %><br>
+    <%= f.text_field :nome_da_empresa %>
+  </div>
+  <div class="field">
+    <%= f.label :produto %><br>
+    <%= f.text_field :produto %>
+  </div>
+  <div class="field">
+    <%= f.label :montante %><br>
+    <%= f.text_field :montante %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone %><br>
+    <%= f.text_field :telefone %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

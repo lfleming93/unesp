@@ -1,0 +1,26 @@
+Tamanho 1000 e large.dat
+
+Threads     1             2           3           4
+Tempo       18099.8 ms    10662.9 ms  14540.2 ms  12256 ms
+Speedup     1             1.7         1.23        1.47
+Eficiencia  1             0.85        0.41        0.37
+
+
+Tamanho 500 e medium.dat
+
+Threads     1             2           3           4
+Tempo       927.132 ms    549.813 ms  771.902 ms  618.836 ms
+Speedup     1             1.68        1.2         1.5
+Eficiencia  1             0.84        0.4         0.37
+
+
+
+System Specs:
+
+MacBook Pro
+
+OS X Yosemite
+
+2.6 GHz Intel Core i5
+
+8 GB 1600 MHz DDR3

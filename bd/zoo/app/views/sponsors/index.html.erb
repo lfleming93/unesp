@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sponsors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bairro</th>
+      <th>Rua</th>
+      <th>Cidade</th>
+      <th>Nome da empresa</th>
+      <th>Produto</th>
+      <th>Montante</th>
+      <th>Telefone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sponsors.each do |sponsor| %>
+      <tr>
+        <td><%= sponsor.bairro %></td>
+        <td><%= sponsor.rua %></td>
+        <td><%= sponsor.cidade %></td>
+        <td><%= sponsor.nome_da_empresa %></td>
+        <td><%= sponsor.produto %></td>
+        <td><%= sponsor.montante %></td>
+        <td><%= sponsor.telefone %></td>
+        <td><%= link_to 'Show', sponsor %></td>
+        <td><%= link_to 'Edit', edit_sponsor_path(sponsor) %></td>
+        <td><%= link_to 'Destroy', sponsor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sponsor', new_sponsor_path %>

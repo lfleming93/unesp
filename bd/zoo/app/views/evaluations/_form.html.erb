@@ -1,0 +1,49 @@
+<%= form_for(@evaluation) do |f| %>
+  <% if @evaluation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evaluation.errors.count, "error") %> prohibited this evaluation from being saved:</h2>
+
+      <ul>
+      <% @evaluation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br>
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :observacoes %><br>
+    <%= f.text_field :observacoes %>
+  </div>
+  <div class="field">
+    <%= f.label :altura %><br>
+    <%= f.text_field :altura %>
+  </div>
+  <div class="field">
+    <%= f.label :comprimento %><br>
+    <%= f.text_field :comprimento %>
+  </div>
+  <div class="field">
+    <%= f.label :peso %><br>
+    <%= f.text_field :peso %>
+  </div>
+  <div class="field">
+    <%= f.label :envergadura %><br>
+    <%= f.text_field :envergadura %>
+  </div>
+  <div class="field">
+    <%= f.label :animal_id %><br>
+    <%= f.text_field :animal_id %>
+  </div>
+  <div class="field">
+    <%= f.label :funcionario_id %><br>
+    <%= f.text_field :funcionario_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

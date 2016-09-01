@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  funcao: MyString
+  data_nasc: 2016-01-16
+  data_cont: 2016-01-16
+  sexo: MyString
+  bairro: MyString
+  cidade: MyString
+  rua: MyString
+  n_carteira_trabalho: 1
+  nome: MyString
+  telefone: MyString
+  especialidade: MyString
+
+two:
+  funcao: MyString
+  data_nasc: 2016-01-16
+  data_cont: 2016-01-16
+  sexo: MyString
+  bairro: MyString
+  cidade: MyString
+  rua: MyString
+  n_carteira_trabalho: 1
+  nome: MyString
+  telefone: MyString
+  especialidade: MyString

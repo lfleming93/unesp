@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Evaluations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Observacoes</th>
+      <th>Altura</th>
+      <th>Comprimento</th>
+      <th>Peso</th>
+      <th>Envergadura</th>
+      <th>Animal</th>
+      <th>Funcionario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @evaluations.each do |evaluation| %>
+      <tr>
+        <td><%= evaluation.data %></td>
+        <td><%= evaluation.observacoes %></td>
+        <td><%= evaluation.altura %></td>
+        <td><%= evaluation.comprimento %></td>
+        <td><%= evaluation.peso %></td>
+        <td><%= evaluation.envergadura %></td>
+        <td><%= evaluation.animal %></td>
+        <td><%= evaluation.employee %></td>
+        <td><%= link_to 'Show', evaluation %></td>
+        <td><%= link_to 'Edit', edit_evaluation_path(evaluation) %></td>
+        <td><%= link_to 'Destroy', evaluation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Evaluation', new_evaluation_path %>

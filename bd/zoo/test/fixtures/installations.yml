@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descricao: MyString
+  area: 9.99
+  volume: 9.99
+  localizacao: MyString
+  tipo: MyString
+  sponsor_id: 
+
+two:
+  descricao: MyString
+  area: 9.99
+  volume: 9.99
+  localizacao: MyString
+  tipo: MyString
+  sponsor_id: 
