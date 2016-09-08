@@ -5,11 +5,12 @@
 
 #include "linkedlist.h"
 
-static pthread_mutex_t global_lock = PTHREAD_MUTEX_INITIALIZER;
 
 typedef struct _list_node_t {
   int key;
   struct _list_node_t *next;
+  pthread_mutex_t lock;
+
 } list_node_t;
 
 
@@ -21,8 +22,14 @@ void list_init(list_node_t **head)
 {
   *head = (list_node_t *)malloc(sizeof(list_node_t));
   (*head)->key = INT_MIN;
+
+  pthread_mutex_init(&(*head)->lock, NULL);
+
   (*head)->next = (list_node_t *)malloc(sizeof(list_node_t));
   (*head)->next->key = INT_MAX;
+
+  pthread_mutex_init(&(*head)->next->lock, NULL);
+
   (*head)->next->next = NULL;
 }
 
@@ -46,20 +53,29 @@ size_t list_size(list_node_t *head)
 int list_add(list_node_t *head, int item)
 {
   list_node_t *pred, *curr;
-  pthread_mutex_lock(&global_lock);
+
+  pthread_mutex_lock(&head->lock);
 
   pred = head;
   curr = head->next;
+
+  pthread_mutex_lock(&curr->lock);
+
   while (curr->key < item) {
+    pthread_mutex_unlock(&pred->lock);
     pred = curr;
     curr = curr->next;
+    pthread_mutex_lock(&curr->lock);
   }
 
   list_node_t *node = (list_node_t *)malloc(sizeof(list_node_t));
+  pthread_mutex_init(&node->lock, NULL);
   node->key = item;
   node->next = curr;
   pred->next = node;
-  pthread_mutex_unlock(&global_lock);
+
+  pthread_mutex_unlock(&curr->lock);
+  pthread_mutex_unlock(&pred->lock);
 
   return 1;
 }
@@ -70,26 +86,32 @@ int list_add(list_node_t *head, int item)
 int list_remove(list_node_t *head, int item)
 {
   list_node_t *pred, *curr;
-  pthread_mutex_lock(&global_lock);
-  int return_value = 0;
+  int retorno = 0;
+
+  pthread_mutex_lock(&head->lock);
 
   pred = head;
   curr = head->next;
+  pthread_mutex_lock(&curr->lock);
+
   while (curr->key < item) {
+    pthread_mutex_unlock(&pred->lock);
     pred = curr;
     curr = curr->next;
+    pthread_mutex_lock(&curr->lock);
   }
   if (item == curr->key) { /* found */
     pred->next = curr->next;
+    pthread_mutex_unlock(&curr->lock);
+    pthread_mutex_destroy(&curr->lock);
     free(curr);
-
-    pthread_mutex_unlock(&global_lock);
-
-    return_value = 1;
+    retorno =  1;
   }
-  pthread_mutex_unlock(&global_lock);
+  else
+    pthread_mutex_unlock(&curr->lock);
 
-  return return_value;
+  pthread_mutex_unlock(&pred->lock);
+  return retorno;
 }
 
 /*
@@ -97,16 +119,27 @@ int list_remove(list_node_t *head, int item)
  */
 int list_contain(list_node_t *head, int item)
 {
-  list_node_t *curr;
-  int flag;
-  pthread_mutex_lock(&global_lock);
+  list_node_t *curr, *pred;
+
+  pthread_mutex_lock(&head->lock);
+  int retorno;
+  pred = head;
+  curr = head->next;
+
   curr = head->next;
   while (curr->key < item) {
+    pthread_mutex_unlock(&pred->lock);
+    pred = curr;
     curr = curr->next;
+    pthread_mutex_lock(&curr->lock);
   }
-  flag = (item == curr->key);
-  pthread_mutex_unlock(&global_lock);
-  return flag;
+
+  retorno = (item == curr->key);
+
+  pthread_mutex_unlock(&curr->lock);
+  pthread_mutex_unlock(&pred->lock);
+
+  return retorno;
 
 }
 
@@ -116,7 +149,6 @@ int list_contain(list_node_t *head, int item)
  */
 void list_print(list_node_t *head)
 {
-  return;
   if (head == NULL) return;
 
   list_node_t *curr = head;
