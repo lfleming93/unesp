@@ -1,0 +1,133 @@
+Hash Table com Lock Global:
+
+Number of threads = 1
+
+=============== Initial state ===============
+hash table size = 100000
+=============================================
+[0]: 100000
+=============== Final state ===============
+hash table size = 100001
+=============================================
+
+Operations: [add, remove, search] = 19915, 19914, 60171
+Number of elements found = 23454
+Elapsed time: 0.019635 s
+Throughput: 5.09295e+06 ops/s
+
+
+Number of threads = 2
+
+=============== Initial state ===============
+hash table size = 100000
+=============================================
+[0]: 50000
+[1]: 50000
+=============== Final state ===============
+hash table size = 100002
+=============================================
+
+Operations: [add, remove, search] = 19968, 19966, 60066
+Number of elements found = 23595
+Elapsed time: 0.177262 s
+Throughput: 564137 ops/s
+
+
+Number of threads = 3
+
+=============== Initial state ===============
+hash table size = 100000
+=============================================
+[0]: 33333
+[1]: 33333
+[2]: 33333
+=============== Final state ===============
+hash table size = 100002
+=============================================
+
+Operations: [add, remove, search] = 20014, 20012, 59973
+Number of elements found = 23439
+Elapsed time: 0.230581 s
+Throughput: 433683 ops/s
+
+
+Number of threads = 4
+
+=============== Initial state ===============
+hash table size = 100000
+=============================================
+[1]: 25000
+[0]: 25000
+[2]: 25000
+[3]: 25000
+=============== Final state ===============
+hash table size = 100002
+=============================================
+
+Operations: [add, remove, search] = 20038, 20036, 59926
+Number of elements found = 23546
+Elapsed time: 0.239763 s
+Throughput: 417079 ops/s
+
+
+Number of threads = 5
+
+=============== Initial state ===============
+hash table size = 100000
+=============================================
+[0]: 20000
+[1]: 20000
+[2]: 20000
+[3]: 20000
+[4]: 20000
+=============== Final state ===============
+hash table size = 100001
+=============================================
+
+Operations: [add, remove, search] = 20006, 20005, 59989
+Number of elements found = 23659
+Elapsed time: 0.205956 s
+Throughput: 485541 ops/s
+
+
+Number of threads = 6
+
+=============== Initial state ===============
+hash table size = 100000
+=============================================
+[0]: 16666
+[1]: 16666
+[2]: 16666
+[3]: 16666
+[4]: 16666
+[5]: 16666
+=============== Final state ===============
+hash table size = 100001
+=============================================
+
+Operations: [add, remove, search] = 19997, 19996, 60003
+Number of elements found = 23771
+Elapsed time: 0.239108 s
+Throughput: 418204 ops/s
+
+
+Number of threads = 7
+
+=============== Initial state ===============
+hash table size = 100000
+=============================================
+[0]: 14285
+[1]: 14285
+[2]: 14285
+[3]: 14285
+[4]: 14285
+[5]: 14285
+[6]: 14285
+=============== Final state ===============
+hash table size = 100002
+=============================================
+
+Operations: [add, remove, search] = 19931, 19929, 60135
+Number of elements found = 23912
+Elapsed time: 0.250049 s
+Throughput: 399902 ops/s

@@ -1,0 +1,147 @@
+Number of threads = 1
+
+=============== Initial state ===============
+hash table size = 10000
+=============================================
+[0]: 100000
+=============== Final state ===============
+hash table size = 10001
+=============================================
+
+Operations: [add, remove, search] = 5005, 5004, 89991
+Number of elements found = 35379
+Elapsed time: 0.005403 s
+Throughput: 1.85082e+07 ops/s
+
+Number of threads = 2
+
+=============== Initial state ===============
+hash table size = 10000
+=============================================
+[0]: 50000
+[1]: 50000
+]=============== Final state ===============
+hash table size = 9953
+=============================================
+
+Operations: [add, remove, search] = 5015, 5015, 89970
+Number of elements found = 35493
+Elapsed time: 0.004579 s
+Throughput: 2.18388e+07 ops/s
+
+Number of threads = 3
+
+=============== Initial state ===============
+hash table size = 10000
+=============================================
+[0]: 33333
+[1]: 33333
+[2]: 33333
+=============== Final state ===============
+hash table size = 9974
+=============================================
+
+Operations: [add, remove, search] = 5029, 5027, 89943
+Number of elements found = 35496
+Elapsed time: 0.003194 s
+Throughput: 3.13084e+07 ops/s
+
+Number of threads = 4
+
+=============== Initial state ===============
+hash table size = 10000
+=============================================
+[0]: 25000
+[1]: 25000
+[2]: 25000
+[3]: 25000
+=============== Final state ===============
+hash table size = 9976
+=============================================
+
+Operations: [add, remove, search] = 5086, 5084, 89830
+Number of elements found = 35443
+Elapsed time: 0.006048 s
+Throughput: 1.65344e+07 ops/s
+
+Number of threads = 5
+
+=============== Initial state ===============
+hash table size = 10000
+=============================================
+[0]: 20000
+[1]: 20000
+[2]: 20000
+[3]: 20000
+[4]: 20000
+=============== Final state ===============
+hash table size = 10000
+=============================================
+
+Operations: [add, remove, search] = 5023, 5022, 89955
+Number of elements found = 35464
+Elapsed time: 0.005099 s
+Throughput: 1.96117e+07 ops/s
+
+Number of threads = 6
+
+=============== Initial state ===============
+hash table size = 10000
+=============================================
+[0]: 16666
+[1]: 16666
+[2]: 16666
+[3]: 16666
+[4]: 16666
+[5]: 16666
+=============== Final state ===============
+hash table size = 9986
+=============================================
+
+Operations: [add, remove, search] = 5029, 5025, 89942
+Number of elements found = 35470
+Elapsed time: 0.005531 s
+Throughput: 1.80792e+07 ops/s
+
+Number of threads = 7
+
+=============== Initial state ===============
+hash table size = 10000
+=============================================
+[0]: 14285
+[1]: 14285
+[2]: 14285
+[3]: 14285
+[4]: 14285
+[5]: 14285
+[6]: 14285
+=============== Final state ===============
+hash table size = 9989
+=============================================
+
+Operations: [add, remove, search] = 5000, 4996, 89999
+Number of elements found = 35321
+Elapsed time: 0.006345 s
+Throughput: 1.57597e+07 ops/s
+
+Number of threads = 8
+
+=============== Initial state ===============
+hash table size = 10000
+=============================================
+[0]: 12500
+[1]: 12500
+[2]: 12500
+[3]: 12500
+[4]: 12500
+[5]: 12500
+[6]: 12500
+[7]: 12500
+=============== Final state ===============
+hash table size = 9968
+=============================================
+
+Operations: [add, remove, search] = 5033, 5027, 89940
+Number of elements found = 35352
+Elapsed time: 0.005137 s
+Throughput: 1.94666e+07 ops/s

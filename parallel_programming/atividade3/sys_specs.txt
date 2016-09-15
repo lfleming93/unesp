@@ -1,0 +1,7 @@
+OS X El Capitan
+Version 10.11.6
+
+Processor 2.6 GHz Intel Core i5
+Memory 8 GB 1600 MHz DDR3
+
+Number of Cores: 4
