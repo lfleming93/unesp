@@ -3,13 +3,15 @@ CC  := gcc
 CFLAGS  := -O3
 LDFLAGS := -pthread
 
-TARGET := prodcon-1.x prodcon-2.x prodcon-3.x
+TARGET := prodcon-1.x prodcon-2.x prodcon-3.x prodcon-4.x
 
 SOURCE_FIRST := prodcon-1.c buffer.c
 
 SOURCE_SECOND := prodcon-2.c buffer.c
 
 SOURCE_THIRD := prodcon-3.c buffer.c
+
+SOURCE_FOURTH := prodcon-4.c buffer.c
 
 ALL: $(TARGET)
 
@@ -22,6 +24,8 @@ prodcon-2.x: $(SOURCE_SECOND)
 prodcon-3.x: $(SOURCE_THIRD)
 	$(CC) $(CFLAGS) $(SOURCE_THIRD) -o prodcon-3.x $(LDFLAGS)
 
+prodcon-4.x: $(SOURCE_FOURTH)
+	$(CC) $(CFLAGS) $(SOURCE_FOURTH) -o prodcon-4.x $(LDFLAGS)
 
 clean:
 	rm -f $(TARGET) *.o

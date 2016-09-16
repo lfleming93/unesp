@@ -6,7 +6,8 @@
 #include "buffer.h"
 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
-pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+pthread_cond_t cond_consumer = PTHREAD_COND_INITIALIZER;
+pthread_cond_t cond_producer = PTHREAD_COND_INITIALIZER;
 
 /* producer thread */
 void *producer(void *arg)
@@ -17,11 +18,11 @@ void *producer(void *arg)
     pthread_mutex_lock(&mutex);
 
     while (buffer_is_full())
-      pthread_cond_wait(&cond, &mutex);
+      pthread_cond_wait(&cond_consumer, &mutex);
 
     buffer_put(i);
 
-    pthread_cond_signal(&cond);
+    pthread_cond_signal(&cond_producer);
 
     pthread_mutex_unlock(&mutex);
   }
@@ -38,11 +39,11 @@ void *consumer(void *arg)
     pthread_mutex_lock(&mutex);
 
     while (buffer_is_empty())
-      pthread_cond_wait(&cond, &mutex);
+      pthread_cond_wait(&cond_producer, &mutex);
 
     int tmp = buffer_get();
 
-    pthread_cond_signal(&cond);
+    pthread_cond_signal(&cond_consumer);
     pthread_mutex_unlock(&mutex);
 
     fprintf(stdout, "%d\n", tmp);
