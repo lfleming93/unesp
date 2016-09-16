@@ -33,10 +33,10 @@ int main()
   for (thread = 0; thread < thread_count; thread++)
     pthread_join(thread_handles[thread], NULL);
 
+  gettimeofday(&stop, NULL);
 
   free(thread_handles);
 
-  gettimeofday(&stop, NULL);
 
   double tempo = \
     (((double)(stop.tv_sec)*1000.0 + (double)(stop.tv_usec/1000.0)) - \
@@ -50,7 +50,7 @@ int main()
 
 void* SumVector(void* rank) {
   long my_rank = (long) rank;
-  unsigned long i, my_sum = 0;
+  unsigned long i, my_sum;
   unsigned long local_N = N / thread_count;
   unsigned long first_i = my_rank * local_N;
   unsigned long last_i = (my_rank + 1) * local_N - 1;

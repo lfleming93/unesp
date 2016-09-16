@@ -1,0 +1,4 @@
+Usar declaracao `volatile int done = 0;` quando for usar busy-waiting (flag)
+
+
+
