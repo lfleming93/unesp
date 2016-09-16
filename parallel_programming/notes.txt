@@ -1,5 +1,7 @@
 Computação paralela:
 
+Site com slides: http://www.rc.unesp.br/igce/demac/alex/disciplinas/compar/compar.html
+
 Livro:
 Parallel Programming -> Peter Pacheco
 
