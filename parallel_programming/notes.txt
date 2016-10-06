@@ -14,3 +14,10 @@ S = Tserial / Tparallel
 
 Modelo usado: Fork-Join
 
+
+Ideias para projetos:
+
+- N rainhas
+- Quick-sort
+- Merge-sorte
+- Caixero viajante (Sale's man traveling)
