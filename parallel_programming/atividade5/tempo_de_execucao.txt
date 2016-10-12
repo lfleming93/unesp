@@ -1,0 +1,87 @@
+Tamanho 500 e medium.dat
+
+          Normal      OMP
+Média     261.71      127.23
+
+Speedup: 2.05
+Eficiencia: 1
+
+
+Tamanho 1000 e large.dat
+
+          Normal      OMP
+Média     5385.68     2502.9
+
+Speedup: 2.15
+Eficiencia: 1.07
+
+
+
+
+System Specs:
+
+MacBook Pro
+
+OS X Yosemite
+
+2.6 GHz Intel Core i5
+
+8 GB 1600 MHz DDR3
+
+
+
+Amostrar de tempo (10x)
+
+Linear com 500 e medium.dat
+
+Time elapsed = 268.277 ms
+Time elapsed = 271.417 ms
+Time elapsed = 260.014 ms
+Time elapsed = 258.964 ms
+Time elapsed = 254.282 ms
+Time elapsed = 268.97 ms
+Time elapsed = 252.761 ms
+Time elapsed = 254.898 ms
+Time elapsed = 271.016 ms
+Time elapsed = 256.558 ms
+
+Paralelo com OMP 500 e medium.dat
+
+Time elapsed = 125.858 ms
+Time elapsed = 127.281 ms
+Time elapsed = 130.332 ms
+Time elapsed = 125.151 ms
+Time elapsed = 125.957 ms
+Time elapsed = 125.821 ms
+Time elapsed = 125.89 ms
+Time elapsed = 130.929 ms
+Time elapsed = 129.654 ms
+Time elapsed = 125.446 ms
+
+Linear com 1000 e large.dat
+
+Time elapsed = 5364.48 ms
+Time elapsed = 5284.76 ms
+Time elapsed = 5536.46 ms
+Time elapsed = 5475.32 ms
+Time elapsed = 5087.24 ms
+Time elapsed = 5166.55 ms
+Time elapsed = 5561.21 ms
+Time elapsed = 5677.91 ms
+Time elapsed = 5278.6 ms
+Time elapsed = 5424.34 ms
+
+
+Paralelo com OMP 1000 e large.dat
+
+
+Time elapsed = 2553.9 ms
+Time elapsed = 2543.52 ms
+Time elapsed = 2473.29 ms
+Time elapsed = 2476.29 ms
+Time elapsed = 2556.85 ms
+Time elapsed = 2483.53 ms
+Time elapsed = 2474.37 ms
+Time elapsed = 2524.37 ms
+Time elapsed = 2469.66 ms
+Time elapsed = 2473.19 ms
