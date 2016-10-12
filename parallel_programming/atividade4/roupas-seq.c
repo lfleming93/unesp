@@ -37,11 +37,11 @@ int main(int argc, char *argv[])
 
   for (i=0; i<num_roupas; i++)
     roupas[i] = (void *)cl_criar(CL_SUJA);
-    
+
 
 
   gettimeofday(&start, NULL);
-  
+
 
   // processa as roupas: lava, seca, guarda  -- sequencial
   for (i=0; i<num_roupas; i++) {
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
     cl_secar(roupas[i]);
     cl_guardar(roupas[i]);
   }
-  
+
   gettimeofday(&end, NULL);
 
 
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
     cl_apagar(roupas[i]);
 
   elapsed_time = (end.tv_sec - start.tv_sec) + (end.tv_usec - start.tv_usec) / 1000000.0;
-  fprintf(stdout, "Elapsed time: %g s\n", elapsed_time); 
+  fprintf(stdout, "Elapsed time: %g s\n", elapsed_time);
 
   return 0;
 }
